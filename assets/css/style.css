@@ -289,7 +289,7 @@ html.transition *:after {
   background-color: var(--bg-nav);
   background-image: var(--bg-nav-img);
   padding: 20px;
-  backgroun-color: black;
+  background-color: black;
 }
 .row {
   clear: both;
@@ -297,11 +297,13 @@ html.transition *:after {
   padding: 0 auto;
   bottom: 0px;
   clear: both !important;
+
 }
 
 .webintern-footer-inner {
   padding-top: 0px;
   padding-bottom: 0px;
+  background-color: black;
 }
 
 .webintern-footer-logo {
@@ -313,6 +315,8 @@ html.transition *:after {
   margin-top: 0px;
   margin-bottom: 0px;
   transform: transformX(50%);
+  background-color: black;
+
 }
 
 .simple-text p {
