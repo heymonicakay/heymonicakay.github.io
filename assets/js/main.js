@@ -1,5 +1,4 @@
 //common side navbar call
-
 $(document).ready(function () {
   $(".sidenav").sidenav();
 });
@@ -66,7 +65,7 @@ let header = $(`
 <li><a class="white-text" href="assets/MonicaProvence_Resume.pdf" target="_blank" download="MonicaKayProvence_Resume">Download Resume</a></li>
 
 
-<!--TOGGLE FOR LIGHT/DARK MODE-->
+<!--TOGGLE FOR LIGHT/DARK MODE
         <li>
         <label for="switch" class="theme-switch">
         <input class="toggle-checkbox" type="checkbox" id="switch" name="theme" />
@@ -81,7 +80,7 @@ let header = $(`
           </div>
           </label>
         </li>
-</ul>`);
+</ul>-->`);
 
 let footer = $(`
 <footer class="webintern-footer">
@@ -100,8 +99,8 @@ let footer = $(`
                 <div class="empty-space xs-25 sm-25"></div>
             </div>
         </div>
-    <!-- Social media icons for footer -->
 
+    <!-- Social media icons for footer -->
         <div class="social-icons-footer">
         <a class="social-icon-footer linkedin" href="" target="_blank">
             <i class="fab fa-linkedin-in"></i>
@@ -117,11 +116,13 @@ let footer = $(`
   </div>
 </div>
 </footer>`);
+
 let bodyElement = $(`body`);
+
 bodyElement.prepend(header);
 bodyElement.append(footer);
 
-/*JavaScript for toggle for light/dark mode*/
+/*JavaScript for toggle for light/dark mode
 
 var checkbox = document.querySelector("input[name=theme]");
 if (checkbox) {
@@ -149,4 +150,4 @@ if (checkbox) {
       document.documentElement.classList.remove("transition");
     }, 1000);
   };
-}
+}*/
