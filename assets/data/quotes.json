@@ -1,0 +1,165 @@
+{
+    "quotes": [
+        {
+            "id": 0,
+            "text": "\"I have no special talents. I am only passionately curious.\"",
+            "whoSaidIt": "&mdash;Albert Einstein"
+        },
+        {
+            "id": 1,
+            "text": "\"Recognizing the need is the primary condition for design.\"",
+            "whoSaidIt": "&mdash;Charles Eames"
+        },
+        {
+            "id": 3,
+            "text": "\"It's through mistakes that you can grow. You have to get bad in order to get good.\"",
+            "whoSaidIt": "&mdash;Paula Scher"
+        },
+        {
+            "id": 4,
+            "text": "\"Good design is obvious. Great design is transparent.\"",
+            "whoSaidIt": "&mdash;Joe Soparano"
+        },
+        {
+            "id": 5,
+            "text": "\"Design adds value faster than it adds cost.\"",
+            "whoSaidIt": "&mdash;Joel Spolsky"
+        },
+        {
+            "id": 6,
+            "text": "\"A problem well stated is a problem half solved.\"",
+            "whoSaidIt": "&mdash;Charles Kettering"
+        },
+        {
+            "id": 7,
+            "text": "\"“The ability to simplify means to eliminate the unnecessary so that the necessary may speak.",
+            "whoSaidIt": "&mdash;Hans Hofmann"
+        },
+        {
+            "id": 8,
+            "text": "\"Develop a passion for learning. If you do, you will never cease to grow.\"",
+            "whoSaidIt": "&mdash;Anthony J. D'Angelo"
+        },
+        {
+            "id": 9,
+            "text": "\"You are always a student, never a master. You have to keep moving forward.\"",
+            "whoSaidIt": "&mdash;Conrad Hall"
+        },
+        {
+            "id": 10,
+            "text": "\"Anyone can hide. Facing up to things, working through them, that’s what makes you strong.\"",
+            "whoSaidIt": "&mdash;Sarah Dessen"
+        },
+        {
+            "id": 11,
+            "text": "\"The best way out is always through.\"",
+            "whoSaidIt": "&mdash;Robert Frost"
+        },
+        {
+            "id": 12,
+            "text": "\"Doing the best at this moment puts you in the best place for the next moment.\"",
+            "whoSaidIt": "&mdash;Oprah Winfrey"
+        },
+        {
+            "id": 13,
+            "text": "\"Action is the foundational key for all success.\"",
+            "whoSaidIt": "&mdash;Pablo Picasso"
+        },
+        {
+            "id": 14,
+            "text": "\"An ounce of action is worth a ton of theory.\"",
+            "whoSaidIt": "&mdash;Ralph Waldo Emerson"
+        },
+        {
+            "id": 15,
+            "text": "\"How wonderful it is that nobody need wait a single moment before starting to improve the world.\"",
+            "whoSaidIt": "&mdash;Anne Frank"
+        },
+        {
+            "id": 16,
+            "text": "\"Follow your bliss and the universe will open doors for you where there were only walls.\"",
+            "whoSaidIt": "&mdash;Joseph Campbell"
+        },
+        {
+            "id": 17,
+            "text": "\"Life is what you make it. Always has been, always will be.\"",
+            "whoSaidIt": "&mdash;Eleanor Roosevelt"
+        },
+        {
+            "id": 18,
+            "text": "\"“Creativity takes courage.\"",
+            "whoSaidIt": "&mdash;Henri Matisse"
+        },
+        {
+            "id": 19,
+            "text": "\"The purpose of software engineering is to control complexity, not to create it.\"",
+            "whoSaidIt": "&mdash;Pamela Zave"
+        },
+        {
+            "id": 20,
+            "text": "\"There's no use talking about the problem unless you talk about the solution.\"",
+            "whoSaidIt": "&mdash;Betty Williams"
+        },
+        {
+            "id": 21,
+            "text": "\"“Alone we can do so little, together we can do so much.\"",
+            "whoSaidIt": "&mdash;Helen Keller"
+        },
+        {
+            "id": 22,
+            "text": "\"“No one can whistle a symphony. It takes a whole orchestra to play it.\"",
+            "whoSaidIt": "&mdash;H.E. Luccock"
+        },
+        {
+            "id": 23,
+            "text": "\"A user interface is like a joke. If you have to explain it, it’s not that good.\"",
+            "whoSaidIt": "&mdash;Martin Leblanc"
+        },
+        {
+            "id": 24,
+            "text": "\"Simplicity is prerequisite for reliability.\"",
+            "whoSaidIt": "&mdash;Edsger W. Dijkstra"
+        },
+        {
+            "id": 25,
+            "text": "\"Simplicity is the ultimate sophistication.\"",
+            "whoSaidIt": "&mdash;Leonardo da Vinci"
+        },
+        {
+            "id": 26,
+            "text": "\"A good way to have good ideas is by being unoriginal.\"",
+            "whoSaidIt": "&mdash;Bram Cohen"
+        },
+        {
+            "id": 27,
+            "text": "\"There is no failure except in no longer trying.\"",
+            "whoSaidIt": "&mdash;Elbert Hubbard"
+        },
+        {
+            "id": 28,
+            "text": "\"“It always seems impossible until it’s done.\"",
+            "whoSaidIt": "&mdash;Nelson Mandela"
+        },
+        {
+            "id": 29,
+            "text": "\"Opportunities don't happen. You create them.\"",
+            "whoSaidIt": "&mdash;Chris Grosser"
+        },
+        {
+            "id": 30,
+            "text": "\"Critical thinking and curiosity are the key to creativity.\"",
+            "whoSaidIt": "&mdash;Amala Akkineni"
+        },
+        {
+            "id": 31,
+            "text": "\"Small acts, when multiplied by millions of people, can transform the world.\"",
+            "whoSaidIt": "&mdash;Howard Zinn"
+        },
+        {
+            "id": 32,
+            "text": "\"Together, ordinary people can achieve extraordinary result.\"",
+            "whoSaidIt": "&mdash;Becka Schoettle"
+        }
+    ]
+}
+

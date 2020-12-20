@@ -1,3 +1,8 @@
+/* my colors -
+    peach    e3845b
+    light    ffc9b1
+    grey     616161
+*/
 /*Declaration of CSS variables for light/dark theme*/
 
 html[data-theme="light"] {
@@ -45,6 +50,47 @@ html[data-theme="dark"] {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+}
+
+.white-cloud {
+    background-color:rgba(255, 255, 255, 0.73);
+    border: 30px solid rgba(255, 255, 255, 0.53);
+    background-blend-mode: lighten;
+}
+
+.white-cloud-hey {
+    background-color:rgba(255, 255, 255, 0.73);
+    border-top: 30px solid rgba(255, 255, 255, 0.53);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.53);
+    border-left: 30px solid rgba(255, 255, 255, 0.53);
+    border-right: 30px solid rgba(255, 255, 255, 0.53);
+    background-blend-mode: lighten;
+}
+
+.white-cloud-mkay {
+    background-color:rgba(255, 255, 255, 0.73);
+    border-top: 5px solid rgba(255, 255, 255, 0.53);
+    border-bottom: 30px solid rgba(255, 255, 255, 0.53);
+    border-left: 30px solid rgba(255, 255, 255, 0.53);
+    border-right: 30px solid rgba(255, 255, 255, 0.53);
+    background-blend-mode: lighten;
+}
+
+.also-into {
+    transform: translateY(-4.5rem);
+}
+
+.add3-top-m  {
+    margin-top: 3rem;
+}
+.add2-top-m {
+    margin-top: 2rem;
+}
+.sub2-top-m {
+    margin-top: -2rem;
+}
+.sub3-top-m {
+    margin-top: -3rem;
 }
 
 .animated-text span {
@@ -212,4 +258,6 @@ a:hover {
   }
 }
 
-
+::-webkit-scrollbar {
+    display: none;
+}

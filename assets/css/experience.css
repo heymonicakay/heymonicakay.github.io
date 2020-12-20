@@ -8,7 +8,7 @@ html[data-theme="light"] {
   --meta-col: #444;
   --head-col: black;
  }
- 
+
  html[data-theme="dark"] {
   --bg1-color: #272727;
   --text-color: #fff;
@@ -18,8 +18,6 @@ html[data-theme="light"] {
   --shadow-col2:rgba(21, 22, 22, 0.459);
   --meta-col: rgb(155, 149, 149);
   --head-col: #fff;
-
-
  }
 /*Main section*/
 
@@ -96,7 +94,7 @@ html[data-theme="light"] {
 }
 
 ul ol{
-  list-style: disc; 
+  list-style: disc;
   padding: 3%;
 }
 
@@ -157,7 +155,7 @@ ul ol{
 {
   .exp-head{
     margin-top: 0rem !important;
-  } 
+  }
 }
 
 .card-body .pre-heading {
@@ -323,7 +321,7 @@ ul ol{
 
  .content > * + * {
   margin-top: 1rem;
-} 
+}
 
 .volunteerTitle {
   font-size: 1.5rem;

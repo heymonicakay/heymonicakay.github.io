@@ -1,3 +1,4 @@
+/* ---- Source - https://github.com/VincentGarreau/particles.js/ */
 /* ---- particles.js config ---- */
 
 particlesJS('particles-js', {
@@ -10,31 +11,30 @@ particlesJS('particles-js', {
 			}
 		},
 		color: {
-			value: [ '#2EB67D', '#ECB22E', '#E01E5B', '#36C5F0' ]
-		},
+			value: "e3845b" // Connector line color
+        },
 		shape: {
-			type: 'circle',
+			type: 'polygon', //"circle", "edge", "triangle", "polygon", "star", "image", ["circle", "triangle", "image"]
 			stroke: {
-				width: 0,
+				width: 4,
 				color: '#fff'
 			},
 			polygon: {
-				nb_sides: 5
+				nb_sides: 5 // Number of sides on polygon
 			},
 			image: {
-				src: 'https://cdn.freebiesupply.com/logos/large/2x/slack-logo-icon.png',
-				width: 100,
-				height: 100
+				src: '', // Set Image Path
+				width: 100, // Width and height don't decide size.
+				height: 100 // They just decide aspect ratio.
 			}
 		},
-		
 		opacity: {
 			value: 1,
-			random: false,
+			random: true,
 			anim: {
-				enable: false,
-				speed: 1,
-				opacity_min: 0.1,
+				enable: true,
+				speed: 2,
+				opacity_min: 0.2,
 				sync: false
 			}
 		},
@@ -51,16 +51,16 @@ particlesJS('particles-js', {
 		line_linked: {
 			enable: true,
 			distance: 150,
-			color: '#808080',
+			color: '#e3845b',
 			opacity: 0.4,
 			width: 1
 		},
 		move: {
 			enable: true,
-			speed: 5,
+			speed: 3,
 			direction: 'none',
 			random: false,
-			straight: false,
+			straight: false, // if this is set to true while direction is none, particles will not move.
 			out_mode: 'out',
 			bounce: false,
 			attract: {
@@ -75,25 +75,28 @@ particlesJS('particles-js', {
 		events: {
 			onhover: {
 				enable: true,
-				mode: 'repulse'
+				mode: 'bubble'
 			},
 			onclick: {
 				enable: true,
-				mode: 'push'
+				mode: 'repulse'
 			}
 		},
 		modes: {
 			'repulse' : {
-				distance: 70,
-				duration: 0.4
+				distance: 100,
+				duration: 0.7
 			},
-			'push' : {
-				particles_nb: 4
+			'bubble' : {
+                distance: 50,
+                size: 10,
+                duration: 1.5,
 			}
 		}
 	},
 	retina_detect: true
 });
+
 const allElements = document.querySelectorAll('.animated-text');
 
 // It checks if there is at least one element
@@ -130,8 +133,7 @@ if (allElements.length > 0) {
 
 				let spans = txtElement.childNodes;
 
-				// It sets the interval between each letter showing
-				const letterInterval = setInterval(activeLetter, 70);
+				const letterInterval = setInterval(activeLetter, 80); // Sets interval between each letter showing
 
 				function activeLetter() {
 					spans[count].classList.add('active');
@@ -140,10 +142,9 @@ if (allElements.length > 0) {
 					if (count === spans.length) {
 						clearInterval(letterInterval);
 
-						// It waits 4 seconds to start erasing the word
-						setTimeout(() => {
+						setTimeout(() => { // It waits 2 seconds to start erasing the word
 							eraseText();
-						}, 600);
+						}, 1500);
 					}
 				}
 
@@ -158,10 +159,9 @@ if (allElements.length > 0) {
 
 						if (count === -1) {
 							clearInterval(removeInterval);
-							wordsCount++;
+                            wordsCount++;
 
-							// After removing the last letter, call the initial function again
-							entry();
+							entry(); // After removing the last letter, call the initial function again
 						}
 					}
 				}
