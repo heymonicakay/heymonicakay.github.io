@@ -133,8 +133,8 @@ $.ajax({
         console.log(message, "message")
         $.post("//formspree.io/f/xdoppolo", { message: message }, "json")
 
-        handleSubmit()
-        
+        handleClick()
+
         return false;
     });
 }).fail(function(er) {
