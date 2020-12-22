@@ -25,13 +25,7 @@ function topFunction() {
 }
 // clear the form
 const handleClick = () => {
-    var n = $("#inputName")
-    var e = $("#inputEmail")
-    var m = $("#Message")
 
-    n.val("");
-    e.val("");
-    m.val("");
 }
 // picks random quote
 const pickOne = (arr) => {
@@ -133,7 +127,9 @@ $.ajax({
         console.log(message, "message")
         $.post("//formspree.io/f/xdoppolo", { message: message }, "json")
 
-        handleClick()
+        $("#inputName").val("");
+        $("#inputEmail").val("");
+        $("#Message").val("");
 
         return false;
     });
