@@ -385,7 +385,7 @@ html[data-theme="light"] {
 
   .form-control:focus {
     box-shadow: none;
-    border-bottom: 1px solid #e3845b;
+    border-bottom: 2px solid #e3845b;
   }
   .form-group {
     padding-left: 0px;
