@@ -127,7 +127,7 @@ $.ajax({
         $("#inputName").val("");
         $("#inputEmail").val("");
         $("#Message").val("");
-        $("#get-in-touch").innerHTML("Thanks for your message!")
+        $("#get-in-touch").val("Thanks for your message!")
 
         console.log(message, "message")
         $.post("//formspree.io/f/xdoppolo", { message: message }, "json")
