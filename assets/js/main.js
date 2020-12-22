@@ -124,12 +124,11 @@ $.ajax({
         message = $("#contactForm").serializeArray().map(i => {
             return i.value
         })
-        console.log(message, "message")
-        $.post("//formspree.io/f/xdoppolo", { message: message }, "json")
-
         $("#inputName").val("");
         $("#inputEmail").val("");
         $("#Message").val("");
+        console.log(message, "message")
+        $.post("//formspree.io/f/xdoppolo", { message: message }, "json")
 
         return false;
     });
