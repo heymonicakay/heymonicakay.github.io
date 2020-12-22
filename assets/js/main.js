@@ -23,6 +23,16 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+// clear the form
+const handleClick = () => {
+    var n = $("#inputName")
+    var e = $("#inputEmail")
+    var m = $("#Message")
+
+    n.val("");
+    e.val("");
+    m.val("");
+}
 // picks random quote
 const pickOne = (arr) => {
     var numberOutOfAHat = Math.floor(Math.random() * arr.length);
@@ -62,9 +72,7 @@ $.ajax({
                                 </div>
                             </div>
                             <!-- Social media icons for footer -->
-
                             <div class="social-icons-footer mx-lg-auto">
-
                                 <a class="social-icon-footer linkedin" style="visibility: hidden; pointer-events: none;" href=" " target="_blank" rel="author">
                                     <i class="fab fa-linkedin-in"></i>
                                         </a>
@@ -80,17 +88,7 @@ $.ajax({
                                 <a class="social-icon-footer linkedin" style="visibility: hidden; pointer-events: none;" href=" " target="_blank" rel="author">
                                     <i class="fab fa-linkedin-in"></i>
                                         </a>
-
                             </div>
-
-                            <div class="col-12 text-center">
-                                <p>
-                                    <a href="mailto:hey@monicakay.dev" class="col-sm-12 text-white">
-                                        hey@monicakay.dev
-                                            </a>
-                                </p>
-                            </div>
-                            
                         </div>
                         <div class="col-sm-6 col-md-5 pt-3 footer-2 mx-auto">
                             <h4 class="webintern_footer_title h5">
@@ -108,7 +106,7 @@ $.ajax({
                                         <input type="email" class="form-control" id="inputEmail" name="_replyto" placeholder="example@youremail.com" required>
                                     </fieldset>
                                     <fieldset class="form-group text-center">
-                                        <textarea class="form-control" id="Message" name="message" placeholder="Hey Monica Kay! Let's connect!" required></textarea>
+                                        <textarea class="form-control" id="Message" name="message" placeholder="Your message..." required></textarea>
                                     </fieldset>
                                     <fieldset class="form-group text-xs-right text-center">
                                         <button id="sendMessage" class="send-btn btn btn-lg">
@@ -133,9 +131,10 @@ $.ajax({
             return i.value
         })
         console.log(message, "message")
-        $.post("//formspree.io/f/xdoppolo", { message: message }, "json").done(function(res) {
-            console.log(res, "RESPONSE")
-        })
+        $.post("//formspree.io/f/xdoppolo", { message: message }, "json")
+
+        handleSubmit()
+        
         return false;
     });
 }).fail(function(er) {
@@ -211,3 +210,15 @@ let header = $(`
 let bodyElement = $(`body`);
 bodyElement.prepend(header);
 
+// success: function () {
+//     $("#contact_form").html("<div id='message'></div>");
+//     $("#message")
+//       .html("<h2>Contact Form Submitted!</h2>")
+//       .append("<p>We will be in touch soon.</p>")
+//       .hide()
+//       .fadeIn(1500, function () {
+//         $("#message").append(
+//           "<img id='checkmark' src='images/check.png' />"
+//         );
+//       });
+//   }

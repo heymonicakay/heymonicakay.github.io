@@ -99,77 +99,63 @@ particlesJS('particles-js', {
 
 const allElements = document.querySelectorAll('.animated-text');
 
-// It checks if there is at least one element
 if (allElements.length > 0) {
-	//It runs the script for each found element
 	allElements.forEach((element) => {
 		const txtElement = element,
 			wordsList = txtElement.getAttribute('data-words'),
-			words = wordsList.split(', '); // It makes an array of words from data attribute
-
+            // Make an array of words
+            words = wordsList.split(', ');
 		let wordsCount = 0;
-
 		entry();
-
-		// Initial function
 		function entry() {
 			if (wordsCount < words.length) {
-				// It runs the code for each word
 				let word = words[wordsCount],
-					txtArr = word.split(''), // It makes an array of letters in the word
+                    //Make an array of the letters
+                    txtArr = word.split(''),
 					count = 0;
-
-				txtElement.textContent = ''; // It removes the previous text from the element
-
-				// For each letter in the array
+                // clean slate
+                txtElement.textContent = '';
 				txtArr.forEach((letter) => {
-					// It replaces the empty space for the "non-break-space" HTML...
-					// ... This is needed to separate the words properly
+					// space or letter?
 					let _letter = letter === ' ' ? '&nbsp;' : letter;
-
-					// It wraps every letter with a "span" and puts all they back to the element
+					// Wrap letter in "span" and put it back into the element
 					txtElement.innerHTML += `<span>${_letter}</span>`;
-				});
-
-				let spans = txtElement.childNodes;
-
-				const letterInterval = setInterval(activeLetter, 80); // Sets interval between each letter showing
-
+                });
+                let spans = txtElement.childNodes;
+                // Set interval between each letter showing
+                const letterInterval = setInterval(activeLetter, 80);
 				function activeLetter() {
 					spans[count].classList.add('active');
 					count++;
-
 					if (count === spans.length) {
 						clearInterval(letterInterval);
-
 						setTimeout(() => { // It waits 2 seconds to start erasing the word
 							eraseText();
 						}, 1500);
 					}
 				}
-
 				function eraseText() {
-					// It sets the interval between each letter hiding
+					// Set interval between each letter hiding
 					let removeInterval = setInterval(removeLetter, 40);
 					count--;
-
 					function removeLetter() {
 						spans[count].classList.remove('active');
 						count--;
-
 						if (count === -1) {
 							clearInterval(removeInterval);
                             wordsCount++;
-
-							entry(); // After removing the last letter, call the initial function again
+                            entry();
+                            // After removing last letter,
+                            // call initial function again
 						}
 					}
 				}
-			} else {
-				// If the code reaches the last word
-				// It resets the words counter...
+            }
+            else {
+				// If code reaches last word
+				// Reset words counter...
 				wordsCount = 0;
-				// ...and calls the initial function again.
+				// ...and call initial function again.
 				entry();
 			}
 		}
