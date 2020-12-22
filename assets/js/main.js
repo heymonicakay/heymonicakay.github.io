@@ -86,7 +86,7 @@ $.ajax({
                         </div>
                         <div class="col-sm-6 col-md-5 pt-3 footer-2 mx-auto">
                             <h4 class="webintern_footer_title h5">
-                                <small>
+                                <small id="get-in-touch">
                                     Get In Touch
                                 </small>
                             </h4>
@@ -127,6 +127,8 @@ $.ajax({
         $("#inputName").val("");
         $("#inputEmail").val("");
         $("#Message").val("");
+        $("#get-in-touch").innerHTML("Thanks for your message!")
+
         console.log(message, "message")
         $.post("//formspree.io/f/xdoppolo", { message: message }, "json")
 
