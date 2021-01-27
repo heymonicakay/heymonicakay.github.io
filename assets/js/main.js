@@ -168,7 +168,7 @@ let header = $(`
                     </a>
                 </li>
                 <li>
-                    <a class="white-text" href="assets/MonicaKayProvence_Resume.pdf" target="_blank" download="MonicaKayProvence_Resume">
+                    <a class="white-text" href="assets/MonicaKayProvence_Resume.pdf" target="_blank">
                         <button class="btn resume">
                             Download Resume
                         </button>
