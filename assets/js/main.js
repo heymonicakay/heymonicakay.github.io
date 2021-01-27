@@ -168,7 +168,7 @@ let header = $(`
                     </a>
                 </li>
                 <li>
-                    <a class="white-text" href="assets/MonicaProvence_Resume.pdf" target="_blank" download="MonicaKayProvence_Resume">
+                    <a class="white-text" href="assets/MonicaKayProvence_Resume.pdf" target="_blank" download="MonicaKayProvence_Resume">
                         <button class="btn resume">
                             Download Resume
                         </button>
@@ -197,7 +197,7 @@ let header = $(`
             </a>
         </li>
         <li>
-            <a href="assets/MonicaProvence_Resume.pdf" target="_blank" download="MonicaKayProvence_Resume">
+            <a href="assets/MonicaKayProvence_Resume.pdf" target="_blank" download="MonicaKayProvence_Resume">
                 Download Resume
             </a>
         </li>
