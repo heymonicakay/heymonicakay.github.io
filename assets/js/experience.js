@@ -7,21 +7,21 @@ const exp = [
     cardImage: "assets/images/experience-page/nsslogo.png",
     place: "Nashville Software School",
     time: "(July, 2020 - January 2021)",
-    desc: "Intensive six-month, full-time software development bootcamp with immersive, lab-based learning in Full-Stack Development, with a focus on HTML5, CSS3, JavaScript, React, SQL, and Python.<li>Experience with Scrum process and agile workflow</li><li>Used Git & GitHub for version control.</li><li>Experience in a full-time remote environment</li>",
+    desc: "<i>Intensive six-month, full-time software development bootcamp with immersive, lab-based learning in Full-Stack Development, with a focus on HTML5, CSS3, JavaScript, React, SQL, and Python.</i><li>Experience with Scrum process and agile workflow</li><li>Used Git & GitHub for version control.</li><li>Experience in a full-time remote environment</li>",
   },
   {
     title: "Denials Specialist",
     cardImage: "assets/images/experience-page/kemby.jpeg",
     place: "Kemberton",
     time: "(2017 - 2020)",
-    desc: "Healthcare Company specializing in Patient and Provider advocacy through complex claims resolution.<li>Wrote legal appeals on behalf of healthcare Providers & Patients.</li><li>Identified repetitive tasks, and wrote macros to automate them.</li><li>Conducted daily research on current insurance policies.</li>",
+    desc: "<i>Healthcare Company specializing in Patient and Provider advocacy through complex claims resolution.<li>Wrote legal appeals on behalf of healthcare Providers & Patients.</i></li><li>Identified repetitive tasks, and wrote macros to automate them.</li><li>Conducted daily research on current insurance policies.</li>",
   },
   {
     title: "Licensee/Artist",
     cardImage: "assets/images/experience-page/pn.jpeg",
     place: "Paint Nite - Nashville & Memphis",
     time: "(2014 - 2019)",
-    desc:'The premier "social painting" company in the U.S.<li>Started as a Teaching Artist and took over operations for Nashville in 2017.</li><li>Grew Private Event revenue for the Nashville Market from roughly $10,000 annually to over $70,000 in my first year.</li><li>Launched Paint Nite Memphis in 2018, and developed self-sustaining team remotely from home in Nashville, TN.</li>',
+    desc:'<i>The premier "social painting" company in the U.S.<li>Started as a Teaching Artist and took over operations for Nashville in 2017.</i></li><li>Grew Private Event revenue for the Nashville Market from roughly $10,000 annually to over $70,000 in my first year.</li><li>Launched Paint Nite Memphis in 2018, and developed self-sustaining team remotely from home in Nashville, TN.</li>',
   },
 ];
 
