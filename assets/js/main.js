@@ -1,39 +1,36 @@
-//common side navbar call
+import { recList } from "./recommendations.js"
+import { projList } from "./projects.js"
+import { expList } from "./experience.js"
+import { nav } from "./nav.js"
+import { err, pickOne, scrollFunction } from "./util.js"
 $(document).ready(function () {
   $(".sidenav").sidenav();
 });
-//Get the top button
-var mybutton = document.getElementById("myBtn");
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 350 ||
-    document.documentElement.scrollTop > 350
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
+
+$.ajax({
+    url: "assets/data/recommendations.json"
+}).done(recList)
+.fail(err)
+
+$.ajax({
+    url: "assets/data/projects.json"
+}).done(projList)
+.fail(err)
+
+$.ajax({
+    url: "assets/data/experience.json"
+}).done(expList)
+.fail(err);
+
+window.onscroll = scrollFunction();
+
+let bodyElement = $(`body`);
+bodyElement.prepend(nav);
+const topFunction = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-// clear the form
-const handleClick = () => {
 
-}
-// picks random quote
-const pickOne = (arr) => {
-    var numberOutOfAHat = Math.floor(Math.random() * arr.length);
-    const random = arr[numberOutOfAHat]
-    console.log(random);
-    return random
-}
 // get quotes
 $.ajax({
     url: "assets/data/quotes.json"
@@ -48,12 +45,12 @@ $.ajax({
                     <div class="row">
                         <div class="col-lg-7 col-md-6 pt-3" >
                             <div class="col-sm-12 col-md-10 ml-lg-4">
-                                <a class="webintern-footer-logo col-12 d-none d-md-inline-block" href="#">
+                                <a class="webintern-footer-logo col-12 d-none d-md-inline-block" href="#home">
                                     <center>
                                         <img src="assets/images/monica-kay.PNG"style="width: 220px;"/>
                                     </center>
                                 </a>
-                                <div id="quotesGoHere" class="simple-text text-center dark padding-sm">
+                                <div class="simple-text text-center dark padding-sm">
                                     <p>
                                         ${quote.text}
                                             <br />
@@ -134,78 +131,74 @@ $.ajax({
 
         return false;
     });
-}).fail(function(er) {
-    console.log("error", er);
-});
+}).fail(err);
 
 //Footer and Navbar
 
-let header = $(`
-    <nav class="grey darken-2">
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">
-                <img src="assets/images/monica-kay.PNG">
-            </a>
-            <a href="#" data-target="mobile-demo" class="white-text sidenav-trigger">
-                <i class="material-icons">
-                    menu
-                </i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li>
-                    <a class="white-text" href="index.html">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a class="white-text" href="experience.html">
-                        Experience
-                    </a>
-                </li>
-                <li>
-                    <a class="white-text" href="projects.html">
-                        Projects
-                    </a>
-                </li>
-                <li>
-                    <a class="white-text" href="assets/MonicaKayProvence_Resume.pdf" target="_blank">
-                        <button class="btn resume">
-                            Download Resume
-                        </button>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+// let header = $(`
+//     <nav class="grey darken-2">
+//         <div class="nav-wrapper">
+//             <a href="#!" class="brand-logo">
+//                 <img src="assets/images/monica-kay.PNG">
+//             </a>
+//             <a href="#" data-target="mobile-demo" class="white-text sidenav-trigger">
+//                 <i class="material-icons">
+//                     menu
+//                 </i>
+//             </a>
+//             <ul class="right hide-on-med-and-down">
+//                 <li>
+//                     <a class="white-text" href="index.html">
+//                         Home
+//                     </a>
+//                 </li>
+//                 <li>
+//                     <a class="white-text" href="#experience-section">
+//                         Experience
+//                     </a>
+//                 </li>
+//                 <li>
+//                     <a class="white-text" href="projects.html">
+//                         Projects
+//                     </a>
+//                 </li>
+//                 <li>
+//                     <a class="white-text" href="assets/MonicaKayProvence_Resume.pdf" target="_blank">
+//                         <button class="btn resume">
+//                             Download Resume
+//                         </button>
+//                     </a>
+//                 </li>
+//             </ul>
+//         </div>
+//     </nav>
 
-<!--Side Nav Bar -->
+// <!--Side Nav Bar -->
 
-    <ul class="sidenav" id="mobile-demo">
-        <li>
-            <a href="index.html">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="experience.html">
-                Experience
-            </a>
-        </li>
-        <li>
-            <a href="projects.html">
-                Projects
-            </a>
-        </li>
-        <li>
-            <a href="assets/MonicaKayProvence_Resume.pdf" target="_blank" download="MonicaKayProvence_Resume">
-                Download Resume
-            </a>
-        </li>
-    </ul>
-`);
+//     <ul class="sidenav" id="mobile-demo">
+//         <li>
+//             <a href="index.html">
+//                 Home
+//             </a>
+//         </li>
+//         <li>
+//             <a href="experience.html">
+//                 Experience
+//             </a>
+//         </li>
+//         <li>
+//             <a href="projects.html">
+//                 Projects
+//             </a>
+//         </li>
+//         <li>
+//             <a href="assets/MonicaKayProvence_Resume.pdf" target="_blank" download="MonicaKayProvence_Resume">
+//                 Download Resume
+//             </a>
+//         </li>
+//     </ul>
+// `);
 
-let bodyElement = $(`body`);
-bodyElement.prepend(header);
 
 // success: function () {
 //     $("#contact_form").html("<div id='message'></div>");

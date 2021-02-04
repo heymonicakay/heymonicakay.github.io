@@ -35,7 +35,6 @@ html[data-theme="dark"] {
   width: 100%;
 }
 .section {
-  background-color: rgb(63, 25, 170);
   justify-content: center;
   align-items: center;
 }
@@ -261,3 +260,4 @@ a:hover {
 ::-webkit-scrollbar {
     display: none;
 }
+

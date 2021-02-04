@@ -1,23 +1,16 @@
+
 /*CSS variable declaration for light/dark mode*/
 html[data-theme="light"] {
     --bg-mybtn: red;
     --bg-nav: #000000;
     --bg-nav-img: #000000;
-    --bg: #ffffff;
+    --bg: #fafafa;
     --text: #191919;
     --text-color: #6c757d;
-  }
+    --shadow1: rgba(0, 0, 0, 0.3);
+    --shadow2: rgba(0, 0, 0, 0.2);
 
-  html[data-theme="dark"] {
-    --bg-mybtn: rgb(230, 109, 129);
-    --bg-nav: #6617cb;
-    --bg-nav-img: linear-gradient(315deg, #6617cb 0%, #882463 74%);
-    --bg: #191919;
-    --text: #ffffff;
-    --text-color: #fff;
-    --bg-txt-img: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
-    --txt-fill: transparent;
-  }
+}
 
   body {
     height: 100vh;
@@ -28,8 +21,10 @@ html[data-theme="light"] {
     background-color: var(--bg);
   }
 
-  /* Top button */
-
+  a:hover {
+    text-decoration: none;
+  }
+  
   /* smooth scrolling to top */
   html {
     scroll-behavior: smooth;
@@ -580,3 +575,4 @@ html[data-theme="light"] {
   .social-icon:hover:after {
     transform: translate(0) scale(1.2);
   }
+

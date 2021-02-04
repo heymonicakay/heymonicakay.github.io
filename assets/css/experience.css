@@ -9,16 +9,6 @@ html[data-theme="light"] {
   --head-col: black;
  }
 
- html[data-theme="dark"] {
-  --bg1-color: #272727;
-  --text-color: #fff;
-  --bg-txt-img: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
-  --txt-fill: transparent;
-  --shadow-col1:rgb(46, 37, 37);
-  --shadow-col2:rgba(21, 22, 22, 0.459);
-  --meta-col: rgb(155, 149, 149);
-  --head-col: #fff;
- }
 /*Main section*/
 
 .head-upper{
@@ -310,7 +300,7 @@ ul ol{
   width: 100%;
   padding: 1rem;
   margin-bottom: 2rem;
-  margin-top: 4rem;
+  margin-top: .5rem;
   transition: transform var(--d) var(--e);
   z-index: 1;
 }
@@ -320,14 +310,14 @@ ul ol{
 }
 
  .content > * + * {
-  margin-top: 1rem;
+  margin-top: .75rem;
 }
 
 .volunteerTitle {
   font-size: 1.5rem;
   line-height: 1.2;
   margin-top: 2.5em;
-  transform: translateY(40px);
+  transform: translateY(10px);
   transition: all 0.7s;
   font-weight: bold;
 }
@@ -386,6 +376,11 @@ ul ol{
   transition-duration: 0s;
 }
 
+.menu-content {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
 /*Mentorship card*/
 
 .row{
@@ -431,4 +426,63 @@ ul ol{
 
 .card2 .fa{
   color: var(--text-color);
+}
+
+.rec-who {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+    margin: 0 2rem;
+    width: 70%;
+}
+
+.rec.card-body {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 2rem;
+}
+
+.rec.card {
+    background-color: white;
+}
+
+.rec-image {
+    height: 100px;
+    width: 100px;
+}
+
+.recommendations-section {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    justify-content: space-evenly;
+}
+
+div.rec h2.main-heading.mb-0 {
+    margin-top: 0;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    color:#222
+}
+
+.rec.card-content {
+    font-size: small;
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+
+.author.job {
+    font-style: italic;
+}
+
+.peach {
+    background-color: #e3845b4b;
 }

@@ -1,0 +1,85 @@
+{
+    "projects": [
+        {
+            "id": 0,
+            "title": "Wide Retriever",
+            "image": "wr.png",
+            "desc": "Pet fitness tracking application.",
+            "previewLink": "",
+            "repo": "wideRetriever"
+        },
+        {
+            "id": 1,
+            "title": "Neighborly",
+            "image": "neighborly.png",
+            "desc": "Peer-to-peer commodity sharing application.",
+            "previewLink": "",
+            "repo": "neighborly"
+        },
+        {
+            "id": 2,
+            "title": "Rare Media Publishing",
+            "image": "rare.png",
+            "desc": "Publishing platform for the discerning media mogul.",
+            "previewLink": "",
+            "repo": "rare-media-moguls"
+        },
+        {
+            "id": 3,
+            "title": "Nutshell",
+            "image": "lawnartists.png",
+            "desc": "A social dashboard application for lawn artists.",
+            "previewLink": "",
+            "repo": "nutshell-lawn-artists"
+        },
+        {
+            "id": 4,
+            "title": "Holiday Road",
+            "image": "holiday.png",
+            "desc": "Itinerary planning dashboard.",
+            "previewLink": "",
+            "repo": "holiday-road"
+        },
+        {
+            "id": 5,
+            "title": "Inclucivics",
+            "image": "Inclucivics.png",
+            "desc": "Volunteer Project - Data visualization application.",
+            "previewLink": "",
+            "repo": "inclucivics"
+        },
+        {
+            "id": 6,
+            "title": "Truncheons & Flagons",
+            "image": "tf.png",
+            "desc": "Learning Project - Companion application for medieval beer pong. ",
+            "previewLink": "",
+            "repo": "trunch-bunch-truncheons-and-flagons"
+        },
+        {
+            "id": 7,
+            "title": "Martin's Aquarium",
+            "image": "martins.png",
+            "desc": "Learning Project - Company website for aquarium owner.",
+            "previewLink": "",
+            "repo": "fishy"
+        },
+        {
+            "id": 8,
+            "title": "Glassdale",
+            "image": "glassdale.png",
+            "desc": "Learning Project - Police Department database.",
+            "previewLink": "",
+            "repo": "glassdale"
+        },
+        {
+            "id": 9,
+            "title": "Nashville Kennels",
+            "image": "kennels.png",
+            "desc": "Learning Project - Kennel database.",
+            "previewLink": "",
+            "repo": "kennels"
+        }
+
+    ]
+}
