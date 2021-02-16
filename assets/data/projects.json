@@ -26,11 +26,11 @@
         },
         {
             "id": 3,
-            "title": "Nutshell",
-            "image": "lawnartists.png",
-            "desc": "A social dashboard application for lawn artists.",
+            "title": "Inclucivics",
+            "image": "Inclucivics.png",
+            "desc": "Data visualization application.",
             "previewLink": "",
-            "repo": "nutshell-lawn-artists"
+            "repo": "inclucivics"
         },
         {
             "id": 4,
@@ -42,17 +42,17 @@
         },
         {
             "id": 5,
-            "title": "Inclucivics",
-            "image": "Inclucivics.png",
-            "desc": "Volunteer Project - Data visualization application.",
+            "title": "Nutshell",
+            "image": "lawnartists.png",
+            "desc": "Dashboard application for Lawn Artists.",
             "previewLink": "",
-            "repo": "inclucivics"
+            "repo": "nutshell-lawn-artists"
         },
         {
             "id": 6,
             "title": "Truncheons & Flagons",
             "image": "tf.png",
-            "desc": "Learning Project - Companion application for medieval beer pong. ",
+            "desc": "Medieval beer pong companion app. ",
             "previewLink": "",
             "repo": "trunch-bunch-truncheons-and-flagons"
         },
@@ -60,7 +60,7 @@
             "id": 7,
             "title": "Martin's Aquarium",
             "image": "martins.png",
-            "desc": "Learning Project - Company website for aquarium owner.",
+            "desc": "Website built for Martin's Aquarium.",
             "previewLink": "",
             "repo": "fishy"
         },
@@ -68,7 +68,7 @@
             "id": 8,
             "title": "Glassdale",
             "image": "glassdale.png",
-            "desc": "Learning Project - Police Department database.",
+            "desc": "Glassdale Police Department database.",
             "previewLink": "",
             "repo": "glassdale"
         },
@@ -76,7 +76,7 @@
             "id": 9,
             "title": "Nashville Kennels",
             "image": "kennels.png",
-            "desc": "Learning Project - Kennel database.",
+            "desc": "Nashville Kennel database.",
             "previewLink": "",
             "repo": "kennels"
         }

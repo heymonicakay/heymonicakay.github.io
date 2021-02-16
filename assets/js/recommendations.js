@@ -16,7 +16,7 @@ const recommendationCard = (r) => {
                 <div class="text-right author job">${r.whoAreThey}</div>
                 <div class="text-right author">${r.company}</div>
             </div>
-            <a href="${r.linkedIn}">
+            <a href="https://www.linkedin.com/in/${r.linkedIn}/">
                 <img src="assets/images/recommendations/${r.cardImage}.jpeg" class="rec-image circle" />
             </a>
         </div>
