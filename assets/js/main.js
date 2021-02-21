@@ -64,21 +64,14 @@ $.ajax({
                             </div>
                             <!-- Social media icons for footer -->
                             <div class="social-icons-footer mx-lg-auto">
-                                <a class="social-icon-footer linkedin" style="visibility: hidden; pointer-events: none;" href=" " target="_blank" rel="author">
-                                    <i class="fab fa-linkedin-in"></i>
-                                        </a>
-                                <a class="social-icon-footer linkedin" href="https://www.linkedin.com/in/heymonicakay/" target="_blank" rel="author">
-                                    <i class="fab fa-linkedin-in"></i>
-                                        </a>
-                                <a class="social-icon-footer linkedin" style="visibility: hidden; pointer-events: none;" href=" " target="_blank" rel="author">
-                                    <i class="fab fa-linkedin-in"></i>
-                                        </a>
-                                <a class="social-icon-footer github" href="https://github.com/heymonicakay" target="_blank" rel="author">
-                                    <i class="fab fa-github"></i>
-                                        </a>
-                                <a class="social-icon-footer linkedin" style="visibility: hidden; pointer-events: none;" href=" " target="_blank" rel="author">
-                                    <i class="fab fa-linkedin-in"></i>
-                                        </a>
+                                <a href="https://linkedin.com/in/heymonicakay/" title="View my LinkedIn." class="social-icon" style="display: inline-flex;background-color: white;" target="_blank" >
+                                        <div style="background: url(/assets/icons/linkedin.svg) no-repeat; background-size: 60%; background-position: center; height: 50px; width: 50px; margin: auto;">
+                                        </div>
+                                    </a>
+                                <a href="https://github.com/heymonicakay/" title="View my GitHub." class="social-icon" style="display: inline-flex;background-color: white;" target="_blank" >
+                                    <div style="background: url(/assets/icons/github.svg) no-repeat; background-size: 75%; background-position: center; height: 50px; width: 50px; margin: auto;">
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-5 pt-3 footer-2 mx-auto">
