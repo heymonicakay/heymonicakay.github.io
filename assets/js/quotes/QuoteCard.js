@@ -21,10 +21,9 @@ const QuoteCard = (quoteObj) => {
 export const renderQuote = () => {
     fetchQuotes()
     .then(
-        (quoteData) => {
-            console.log(quoteData)
+        (data) => {
             const target = document.getElementById("randomQuoteSection")
-            const randomQuote = pickOne(quoteData)
+            const randomQuote = pickOne( data.quotes )
             target.innerHTML = QuoteCard( randomQuote )
         }
     )

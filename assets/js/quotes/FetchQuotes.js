@@ -2,5 +2,5 @@ import { err } from "../util.js";
 
 export const fetchQuotes = () =>
   $.ajax( { url: "assets/data/quotes.json" })
-  .done( res => res.quotes)
+  .done( res => res )
   .fail( err );
