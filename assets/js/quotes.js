@@ -8,7 +8,7 @@ const quote = (q) => {
             ${q.text}
             <br />
             <span class="right" style="margin-right: 1rem;">
-                ${q.whoSaidIt}
+                &mdash;${q.whoSaidIt}
                     </span>
             <br />
         </p>

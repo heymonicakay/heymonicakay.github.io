@@ -17,8 +17,8 @@ export const shuffle = (arr) => {
     return arr;
 }
 
-export const err = (e) => {
-    console.log(e, "THIS IS AN ERROR")
+export const err = (error) => {
+    console.log("THIS IS AN ERROR", error)
 }
 
 export const scrollFunction = () => {

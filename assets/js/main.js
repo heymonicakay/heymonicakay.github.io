@@ -1,15 +1,18 @@
-import { recList } from "./recommendations.js"
+import { RenderRecommendationList } from "./recommendations/RecommendationList"
 import { projList } from "./projects.js"
 import { expList } from "./experience.js"
 import { nav } from "./nav.js"
 import { err, pickOne, scrollFunction } from "./util.js"
-$(document).ready(function () {
-  $(".sidenav").sidenav();
-});
+
+$(document).ready(
+    () => {
+        $(".sidenav").sidenav();
+    }
+);
 
 $.ajax({
     url: "assets/data/recommendations.json"
-}).done(recList)
+} ).done( ( data ) => RenderRecommendationList(data.recs))
 .fail(err)
 
 $.ajax({
@@ -25,6 +28,7 @@ $.ajax({
 window.onscroll = scrollFunction();
 
 let bodyElement = $(`body`);
+
 bodyElement.prepend(nav);
 const topFunction = () => {
   document.body.scrollTop = 0;
@@ -34,7 +38,8 @@ const topFunction = () => {
 // get quotes
 $.ajax({
     url: "assets/data/quotes.json"
-}).done(function(response) {
+})
+.done((response) => {
     let data = response.quotes;
     const quote = pickOne(data)
 
@@ -125,83 +130,3 @@ $.ajax({
         return false;
     });
 }).fail(err);
-
-//Footer and Navbar
-
-// let header = $(`
-//     <nav class="grey darken-2">
-//         <div class="nav-wrapper">
-//             <a href="#!" class="brand-logo">
-//                 <img src="assets/images/monica-kay.PNG">
-//             </a>
-//             <a href="#" data-target="mobile-demo" class="white-text sidenav-trigger">
-//                 <i class="material-icons">
-//                     menu
-//                 </i>
-//             </a>
-//             <ul class="right hide-on-med-and-down">
-//                 <li>
-//                     <a class="white-text" href="index.html">
-//                         Home
-//                     </a>
-//                 </li>
-//                 <li>
-//                     <a class="white-text" href="#experience-section">
-//                         Experience
-//                     </a>
-//                 </li>
-//                 <li>
-//                     <a class="white-text" href="projects.html">
-//                         Projects
-//                     </a>
-//                 </li>
-//                 <li>
-//                     <a class="white-text" href="assets/MonicaKayProvence_Resume.pdf" target="_blank">
-//                         <button class="btn resume">
-//                             Download Resume
-//                         </button>
-//                     </a>
-//                 </li>
-//             </ul>
-//         </div>
-//     </nav>
-
-// <!--Side Nav Bar -->
-
-//     <ul class="sidenav" id="mobile-demo">
-//         <li>
-//             <a href="index.html">
-//                 Home
-//             </a>
-//         </li>
-//         <li>
-//             <a href="experience.html">
-//                 Experience
-//             </a>
-//         </li>
-//         <li>
-//             <a href="projects.html">
-//                 Projects
-//             </a>
-//         </li>
-//         <li>
-//             <a href="assets/MonicaKayProvence_Resume.pdf" target="_blank" download="MonicaKayProvence_Resume">
-//                 Download Resume
-//             </a>
-//         </li>
-//     </ul>
-// `);
-
-
-// success: function () {
-//     $("#contact_form").html("<div id='message'></div>");
-//     $("#message")
-//       .html("<h2>Contact Form Submitted!</h2>")
-//       .append("<p>We will be in touch soon.</p>")
-//       .hide()
-//       .fadeIn(1500, function () {
-//         $("#message").append(
-//           "<img id='checkmark' src='images/check.png' />"
-//         );
-//       });
-//   }
