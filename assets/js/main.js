@@ -1,29 +1,17 @@
-import { renderRecommendations } from "./recommendations/RecommendationList.js"
-import { renderProjects } from "./projects/ProjectList.js"
-import { expList } from "./experience.js"
 import { nav } from "./nav.js"
-import { err, pickOne, scrollFunction } from "./util.js"
-import { renderSocials } from "./footer/SocialMediaIconList.js"
+import { err, scrollFunction } from "./util.js"
 import { renderQuote } from "./quotes/QuoteCard.js"
+import { renderSocials } from "./footer/SocialMediaIconList.js"
+import { renderProjects } from "./projects/ProjectList.js"
+import { renderExperiences } from "./experience/ExperienceList.js"
+import { renderRecommendations } from "./recommendations/RecommendationList.js"
 
-$(document).ready(
+$(document)
+.ready(
     () => {
         $(".sidenav").sidenav();
     }
 );
-
-$.ajax({ url: "assets/data/recommendations.json" })
-.done(data => renderRecommendations(data.recs))
-.fail(err)
-
-$.ajax({ url: "assets/data/projects.json" })
-    .done( data => renderProjects(data.projects) )
-.fail(err)
-
-$.ajax({
-    url: "assets/data/experience.json"
-}).done(expList)
-.fail(err);
 
 window.onscroll = scrollFunction();
 
@@ -72,5 +60,8 @@ $.ajax({
 )
 .fail(err);
 
+renderExperiences()
+renderRecommendations()
+renderProjects()
 renderSocials()
 renderQuote()

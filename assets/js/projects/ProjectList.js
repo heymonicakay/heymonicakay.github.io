@@ -1,3 +1,4 @@
+import { fetchProjects } from "./FetchProjects.js";
 import { ProjectCard } from "./ProjectCard.js";
 
 const ProjectList = ( projectData ) => {
@@ -5,7 +6,12 @@ const ProjectList = ( projectData ) => {
   return projectsHTML
 }
 
-export const renderProjects = ( projData ) => {
-  const target = document.getElementById( "projectsSection" )
-  target.innerHTML = ProjectList( projData )
+export const renderProjects = ( ) => {
+  fetchProjects()
+  .then(
+    (data)=>{
+      const target = document.getElementById( "projectsSection" )
+      target.innerHTML = ProjectList( data.projects )
+    }
+  )
 };

@@ -1,4 +1,5 @@
 import { shuffle } from "../util.js"
+import { fetchRecommendations } from "./FetchRecommendations.js";
 import { RecommendationCard } from "./RecommendationCard.js";
 
 const RecommendationList = ( recData ) => {
@@ -7,7 +8,11 @@ const RecommendationList = ( recData ) => {
   return recommendationsHTML
 };
 
-export const renderRecommendations = (recData) => {
-  const target = document.querySelector( ".recommendations-section" )
-  target.innerHTML = RecommendationList(recData)
+export const renderRecommendations = () => {
+  fetchRecommendations()
+  .then(
+    (data) => {
+      const target = document.querySelector( ".recommendations-section" )
+      target.innerHTML = RecommendationList(data.recs)
+    })
 }
