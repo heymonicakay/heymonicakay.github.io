@@ -3,6 +3,8 @@ import { projList } from "./projects.js"
 import { expList } from "./experience.js"
 import { nav } from "./nav.js"
 import { err, pickOne, scrollFunction } from "./util.js"
+import { renderSocials } from "./footer/SocialMediaIconList.js"
+import { renderQuote } from "./quotes/QuoteCard.js"
 
 $(document).ready(
     () => {
@@ -40,9 +42,9 @@ const topFunction = () => {
 $.ajax({
     url: "assets/data/quotes.json"
 })
-.done((response) => {
-    let data = response.quotes;
-    const quote = pickOne(data)
+.done(
+    (response) => {
+    const quote = pickOne( response.quotes )
 
     let footer = `
         <footer class="webintern-footer">
@@ -56,30 +58,14 @@ $.ajax({
                                         <img src="assets/images/monica-kay.PNG"style="width: 220px;"/>
                                     </center>
                                 </a>
-                                <div class="simple-text text-center dark padding-sm">
-                                    <p>
-                                        ${quote.text}
-                                            <br />
-                                                <span class="right" style="margin-right: 1rem;">
-                                                    ${quote.whoSaidIt}
-                                                        </span>
-                                                            <br />
-                                    </p>
-                                    <div class="empty-space xs-25 sm-25"></div>
-                                </div>
-                            </div>
-                            <!-- Social media icons for footer -->
-                            <div class="social-icons-footer mx-lg-auto">
-                                <a href="https://linkedin.com/in/heymonicakay/" title="View my LinkedIn." class="social-icon" style="display: inline-flex;background-color: white;" target="_blank" >
-                                        <div style="background: url(/assets/icons/linkedin.svg) no-repeat; background-size: 60%; background-position: center; height: 50px; width: 50px; margin: auto;">
-                                        </div>
-                                    </a>
-                                <a href="https://github.com/heymonicakay/" title="View my GitHub." class="social-icon" style="display: inline-flex;background-color: white;" target="_blank" >
-                                    <div style="background: url(/assets/icons/github.svg) no-repeat; background-size: 75%; background-position: center; height: 50px; width: 50px; margin: auto;">
-                                    </div>
-                                </a>
-                            </div>
+                                <div id="randomQuoteSection" class="simple-text text-center dark padding-sm"></div>
+                            </div>`
+                            // <!-- Social media icons for footer -->
+                            footer +=
+                            `
+                            <div id="socialIconsList" class="social-icons-footer mx-lg-auto"></div>
                         </div>
+
                         <div class="col-sm-6 col-md-5 pt-3 footer-2 mx-auto">
                             <h4 class="webintern_footer_title h5">
                                 <small id="get-in-touch">
@@ -115,19 +101,32 @@ $.ajax({
     bodyElement.append(footer)
 
     let message = "";
-    $("#sendMessage").on("click", function(e) {
-        e.preventDefault()
-        message = $("#contactForm").serializeArray().map(i => {
-            return i.value
-        })
-        $("#inputName").val("");
-        $("#inputEmail").val("");
-        $("#Message").val("");
-        $("#get-in-touch").val("Thanks for your message!")
+    $("#sendMessage")
+        .on(
+            "click",
+            (e) => {
+                e.preventDefault()
 
-        console.log(message, "message")
-        $.post("//formspree.io/f/xdoppolo", { message: message }, "json")
+                message = $("#contactForm")
+                    .serializeArray()
+                    .map(i => i.value)
+                $("#inputName").val("");
+                $("#inputEmail").val("");
+                $("#Message").val("");
+                $("#get-in-touch").val("Thanks for your message!")
 
-        return false;
-    });
-}).fail(err);
+                console.log(message, "this is the message")
+
+                $.post(
+                    "//formspree.io/f/xdoppolo",
+                    { message: message },
+                    "json"
+                )
+
+            return false;
+            });
+    }
+).fail(err);
+
+renderSocials()
+renderQuote()
