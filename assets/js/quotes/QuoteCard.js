@@ -1,5 +1,5 @@
 import { pickOne } from "../util.js";
-import { fetchQuotes } from "./FetchQuotes";
+import { fetchQuotes } from "./FetchQuotes.js";
 
 const QuoteCard = (quoteObj) => {
     return `
