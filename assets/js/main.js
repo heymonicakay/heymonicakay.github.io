@@ -1,4 +1,4 @@
-import { RenderRecommendationList } from "./recommendations/RecommendationList"
+import { RenderRecommendationList } from "./recommendations/RecommendationList.js"
 import { projList } from "./projects.js"
 import { expList } from "./experience.js"
 import { nav } from "./nav.js"
@@ -30,6 +30,7 @@ window.onscroll = scrollFunction();
 let bodyElement = $(`body`);
 
 bodyElement.prepend(nav);
+
 const topFunction = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
