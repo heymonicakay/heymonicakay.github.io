@@ -19,11 +19,14 @@ const QuoteCard = (quoteObj) => {
 }
 
 export const renderQuote = () => {
-    const quoteData = fetchQuotes()
+    fetchQuotes()
+    .then(
+        (quoteData) => {
+            console.log(quoteData)
+            const target = document.getElementById("randomQuoteSection")
+            const randomQuote = pickOne(quoteData)
+            target.innerHTML = QuoteCard( randomQuote )
+        }
+    )
 
-    console.log(quoteData)
-
-    const target = document.getElementById("randomQuoteSection")
-    const randomQuote = pickOne(quoteData)
-    target.innerHTML = QuoteCard( randomQuote )
 }
