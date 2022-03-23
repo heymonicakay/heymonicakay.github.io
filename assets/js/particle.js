@@ -1,7 +1,24 @@
 /* ---- Source - https://github.com/VincentGarreau/particles.js/ */
 /* ---- particles.js config ---- */
 
-particlesJS('particles-js', {
+const target = document.getElementById( 'interestedIn' );
+const shuffle = ( data ) => {
+	let index = data.length - 1, temporary, random;
+
+	for ( index = index; index > 0; index-- ) {
+		random = Math.floor( Math.random() * index );
+		temporary = data[ index ];
+		data[ index ] = data[ random ];
+		data[ random ] = temporary;
+	}
+	return data;
+}
+const fetchInterests = () =>
+	$.ajax( { url: "assets/data/interests.json" } )
+		.done( res => res )
+		.fail( ( msg ) => console.log( msg ) )
+
+particlesJS( 'particles-js', {
 	particles: {
 		number: {
 			value: 140,
@@ -12,7 +29,7 @@ particlesJS('particles-js', {
 		},
 		color: {
 			value: "e3845b" // Connector line color
-        },
+		},
 		shape: {
 			type: 'polygon', //"circle", "edge", "triangle", "polygon", "star", "image", ["circle", "triangle", "image"]
 			stroke: {
@@ -83,81 +100,72 @@ particlesJS('particles-js', {
 			}
 		},
 		modes: {
-			'repulse' : {
+			'repulse': {
 				distance: 100,
 				duration: 0.7
 			},
-			'bubble' : {
-                distance: 50,
-                size: 10,
-                duration: 1.5,
+			'bubble': {
+				distance: 50,
+				size: 10,
+				duration: 1.5,
 			}
 		}
 	},
 	retina_detect: true
-});
+})
 
-const allElements = document.querySelectorAll('.animated-text');
+fetchInterests()
+	.then(
+		( data ) => {
+			const interests = shuffle(data.interests.map( i => i.interest ))
 
-if (allElements.length > 0) {
-	allElements.forEach((element) => {
-		const txtElement = element,
-			wordsList = txtElement.getAttribute('data-words'),
-            // Make an array of words
-            words = wordsList.split(', ');
-		let wordsCount = 0;
-		entry();
-		function entry() {
-			if (wordsCount < words.length) {
-				let word = words[wordsCount],
-                    //Make an array of the letters
-                    txtArr = word.split(''),
-					count = 0;
-                // clean slate
-                txtElement.textContent = '';
-				txtArr.forEach((letter) => {
-					// space or letter?
-					let _letter = letter === ' ' ? '&nbsp;' : letter;
-					// Wrap letter in "span" and put it back into the element
-					txtElement.innerHTML += `<span>${_letter}</span>`;
-                });
-                let spans = txtElement.childNodes;
-                // Set interval between each letter showing
-                const letterInterval = setInterval(activeLetter, 80);
-				function activeLetter() {
-					spans[count].classList.add('active');
-					count++;
-					if (count === spans.length) {
-						clearInterval(letterInterval);
-						setTimeout(() => { // It waits 2 seconds to start erasing the word
-							eraseText();
-						}, 1500);
+			let wordsCount = 0;
+			entry();
+			function entry() {
+				if ( wordsCount < interests.length ) {
+					const word = interests[ wordsCount ]
+					const charArray = word.split( '' )
+					let count = 0;
+					target.textContent = '';
+					charArray.forEach( ( spaceOrLetter ) => {
+						// space or letter?
+						const char = spaceOrLetter === ' '
+							? '&nbsp;'
+							: spaceOrLetter;
+						// Wrap letter in "span" and put it back into the element
+						target.innerHTML += `<span>${ char }</span>`;
+					} )
+
+					const spans = target.childNodes;
+					const letterInterval = setInterval( activeLetter, 80 );
+					function activeLetter() {
+						spans[ count ].classList.add( 'active' )
+						count++
+
+						if ( count === spans.length ) {
+							clearInterval( letterInterval )
+							setTimeout( () => eraseText(), 1500 )
+						}
 					}
-				}
-				function eraseText() {
-					// Set interval between each letter hiding
-					let removeInterval = setInterval(removeLetter, 40);
-					count--;
-					function removeLetter() {
-						spans[count].classList.remove('active');
-						count--;
-						if (count === -1) {
-							clearInterval(removeInterval);
-                            wordsCount++;
-                            entry();
-                            // After removing last letter,
-                            // call initial function again
+					function eraseText() {
+						const removeInterval = setInterval( removeLetter, 40 )
+						count--
+						function removeLetter() {
+							spans[ count ].classList.remove( 'active' )
+							count--
+
+							if ( count === -1 ) {
+								clearInterval( removeInterval )
+								wordsCount++
+								entry()
+							}
 						}
 					}
 				}
-            }
-            else {
-				// If code reaches last word
-				// Reset words counter...
-				wordsCount = 0;
-				// ...and call initial function again.
-				entry();
+				else {
+					wordsCount = 0
+					entry()
+				}
 			}
 		}
-	});
-}
+	)

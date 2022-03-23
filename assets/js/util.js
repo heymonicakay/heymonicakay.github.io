@@ -1,24 +1,24 @@
 const mybutton = document.getElementById("myBtn");
 
 export const pickOne = (arr) => {
-    var numberOutOfAHat = Math.floor(Math.random() * arr.length);
-    const random = arr[numberOutOfAHat]
-    console.log(random);
-    return random
+  const numberOutOfAHat = Math.floor(Math.random() * arr.length);
+  return arr[numberOutOfAHat]
 }
 
-export const shuffle = (arr) => {
-    for (let i = arr.length - 1, temp, rand; i > 0; i--) {
-        rand = Math.floor(Math.random() * i);
-        temp = arr[i];
-        arr[i] = arr[rand];
-        arr[rand] = temp;
-    }
-    return arr;
+export const shuffle = (data) => {
+  let index = data.length - 1, temporary, random;
+
+  for (index = index; index > 0; index-- ) {
+    random = Math.floor(Math.random() * index);
+    temporary = data[index];
+    data[index] = data[random];
+    data[random] = temporary;
+  }
+  return data;
 }
 
 export const err = (error) => {
-    console.log("THIS IS AN ERROR", error)
+    console.error("THIS IS AN ERROR", error)
 }
 
 export const scrollFunction = () => {

@@ -1,0 +1,252 @@
+{
+    "interests": [
+        {
+            "id": 1,
+            "interest": "Cooking"
+        },
+        {
+            "id": 2,
+            "interest": ".NET"
+        },
+        {
+            "id": 3,
+            "interest": "ADO.NET"
+        },
+        {
+            "id": 4,
+            "interest": "Bootstrap"
+        },
+        {
+            "id": 5,
+            "interest": "CSS"
+        },
+        {
+            "id": 6,
+            "interest": "CSS Animations"
+        },
+        {
+            "id": 7,
+            "interest": "CSS Grid"
+        },
+        {
+            "id": 8,
+            "interest": "CodePen"
+        },
+        {
+            "id": 9,
+            "interest": "CodeSandbox"
+        },
+        {
+            "id": 10,
+            "interest": "Relational Database Design"
+        },
+        {
+            "id": 11,
+            "interest": "Design"
+        },
+        {
+            "id": 12,
+            "interest": "Django"
+        },
+        {
+            "id": 13,
+            "interest": "Django REST Framework"
+        },
+        {
+            "id": 14,
+            "interest": "ERDs"
+        },
+        {
+            "id": 15,
+            "interest": "Figma"
+        },
+        {
+            "id": 16,
+            "interest": "Flexbox"
+        },
+        {
+            "id": 17,
+            "interest": "Front-End Development"
+        },
+        {
+            "id": 18,
+            "interest": "Git"
+        },
+        {
+            "id": 19,
+            "interest": "GitHub"
+        },
+        {
+            "id": 20,
+            "interest": "GitLab"
+        },
+        {
+            "id": 21,
+            "interest": "GitPod"
+        },
+        {
+            "id": 22,
+            "interest": "HTML"
+        },
+        {
+            "id": 23,
+            "interest": "jQuery"
+        },
+        {
+            "id": 24,
+            "interest": "JSON Server"
+        },
+        {
+            "id": 25,
+            "interest": "JavaScript"
+        },
+        {
+            "id": 26,
+            "interest": "LINQ"
+        },
+        {
+            "id": 27,
+            "interest": "Markdown"
+        },
+        {
+            "id": 28,
+            "interest": "Miro"
+        },
+        {
+            "id": 29,
+            "interest": "MVC"
+        },
+        {
+            "id": 30,
+            "interest": "NPM Packages"
+        },
+        {
+            "id": 31,
+            "interest": "Python"
+        },
+        {
+            "id": 32,
+            "interest": "PostgresSQL"
+        },
+        {
+            "id": 33,
+            "interest": "Postman"
+        },
+        {
+            "id": 34,
+            "interest": "React Hooks"
+        },
+        {
+            "id": 35,
+            "interest": "Reactstrap"
+        },
+        {
+            "id": 36,
+            "interest": "State Management"
+        },
+        {
+            "id": 37,
+            "interest": "SQL"
+        },
+        {
+            "id": 38,
+            "interest": "SQLite"
+        },
+        {
+            "id": 39,
+            "interest": "SQL Server"
+        },
+        {
+            "id": 40,
+            "interest": "Test Driven Development"
+        },
+        {
+            "id": 41,
+            "interest": "User Driven Development"
+        },
+        {
+            "id": 42,
+            "interest": "Visual Studio Code"
+        },
+        {
+            "id": 43,
+            "interest": "Visual Studio"
+        },
+        {
+            "id": 44,
+            "interest": "Web Development"
+        },
+        {
+            "id": 45,
+            "interest": "Coaching"
+        },
+        {
+            "id": 46,
+            "interest": "Mentoring"
+        },
+        {
+            "id": 47,
+            "interest": "Playing With My Dog, \"Kaos\""
+        },
+        {
+            "id": 48,
+            "interest": "Gardening"
+        },
+        {
+            "id": 49,
+            "interest": "Kayaking"
+        },
+        {
+            "id": 50,
+            "interest": "Painting Oil Portraits"
+        },
+        {
+            "id": 51,
+            "interest": "Encaustic Painting"
+        },
+        {
+            "id": 52,
+            "interest": "Watercolor Painting"
+        },
+        {
+            "id": 53,
+            "interest": "Performing Improv Comedy"
+        },
+        {
+            "id": 54,
+            "interest": "Directing Sketch Comedy"
+        },
+        {
+            "id": 55,
+            "interest": "Reading"
+        },
+        {
+            "id": 56,
+            "interest": "Audiobooks"
+        },
+        {
+            "id": 57,
+            "interest": "LoFi Beats"
+        },
+        {
+            "id": 58,
+            "interest": "Emo Music"
+        },
+        {
+            "id": 59,
+            "interest": "Pickles"
+        },
+        {
+            "id": 60,
+            "interest": "Occasional Skydiving"
+        },
+        {
+            "id": 61,
+            "interest": "Writing Haikus"
+        },
+        {
+            "id": 62,
+            "interest": "Traveling The World"
+        }
+    ]
+}
