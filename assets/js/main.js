@@ -1,5 +1,5 @@
-import { RenderRecommendationList } from "./recommendations/RecommendationList.js"
-import { projList } from "./projects.js"
+import { renderRecommendations } from "./recommendations/RecommendationList.js"
+import { renderProjects } from "./projects/ProjectList.js"
 import { expList } from "./experience.js"
 import { nav } from "./nav.js"
 import { err, pickOne, scrollFunction } from "./util.js"
@@ -12,14 +12,12 @@ $(document).ready(
     }
 );
 
-$.ajax({
-    url: "assets/data/recommendations.json"
-} ).done( ( data ) => RenderRecommendationList(data.recs))
+$.ajax({ url: "assets/data/recommendations.json" })
+.done(data => renderRecommendations(data.recs))
 .fail(err)
 
-$.ajax({
-    url: "assets/data/projects.json"
-}).done(projList)
+$.ajax({ url: "assets/data/projects.json" })
+    .done( data => renderProjects(data.projects) )
 .fail(err)
 
 $.ajax({

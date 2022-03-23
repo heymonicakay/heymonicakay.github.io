@@ -25,6 +25,5 @@ export const renderQuote = () => {
 
     const target = document.getElementById("randomQuoteSection")
     const randomQuote = pickOne(quoteData)
-    const quoteHTML = QuoteCard(randomQuote)
-    target.innerHTML = quoteHTML
+    target.innerHTML = QuoteCard( randomQuote )
 }
