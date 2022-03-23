@@ -1,5 +1,5 @@
 import { shuffle } from "../util.js"
-import { RecommendationCard } from "./RecommendationCard";
+import { RecommendationCard } from "./RecommendationCard.js";
 
 export const RecommendationList = ( recData ) => {
   const twoRandomRecommendations = shuffle( recData ).slice( 0, 2 )
