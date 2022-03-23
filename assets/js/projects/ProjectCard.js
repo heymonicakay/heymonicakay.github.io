@@ -1,5 +1,7 @@
 import { ProjectGitHubIcon } from "./ProjectGitHubIcon.js"
 import { ProjectPreviewLink } from "./ProjectPreviewLink.js"
+import { ProjectTitle } from "./ProjectTitle.js"
+import { ProjectDescription } from "./ProjectDescription.js"
 
 export const ProjectCard = ({image, repo, previewLink, title, desc}) => {
   return `
