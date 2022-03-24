@@ -193,14 +193,6 @@ ul ol{
   box-shadow: 0.45rem 0.45rem 0.8rem var(--shadow-col1), 0 0.5rem 1.125rem var(--shadow-col2);
 }
 
-.projectCard {
-  background-repeat: no-repeat, repeat;
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  width: 300px;
-}
-
 .page-content {
   display: grid;
   grid-gap: 5rem;
@@ -494,4 +486,16 @@ div.rec h2.main-heading.mb-0 {
 
 .peach {
     background-color: #e3845b4b;
+}
+
+.projectCard {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 22rem;
+  width: 22rem;
+}
+
+.projectCard::after {
+  padding-bottom: 100%
 }

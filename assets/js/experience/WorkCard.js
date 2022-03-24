@@ -1,4 +1,4 @@
-export const WorkCard = ( {cardImage, title, place, desc} ) =>
+export const WorkCard = ( {cardImage, title, place, time, desc} ) =>
 `
     <div class="card card1" style="width: 85%; margin-left: auto; margin-right: auto;">
         <img src="${ cardImage }" class="featured-image" style="transform: scale(.8,.8);"/>

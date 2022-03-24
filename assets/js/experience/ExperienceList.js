@@ -3,8 +3,8 @@ import { VolunteerCard } from "./VolunteerCard.js"
 import { WorkCard } from "./WorkCard.js"
 
 const sortExperiences = (expData) => ({
-  volunteer: expData.experience.filter( exp => exp.volunteer ),
-  work: expData.experience.filter( exp => !exp.volunteer )
+  volunteer: expData.filter( exp => exp.volunteer ),
+  work: expData.filter( exp => !exp.volunteer )
 })
 
 const VolunteerList = (volData) => volData.map( vol => VolunteerCard(vol)).join("")
@@ -14,11 +14,11 @@ export const renderExperiences = () => {
   fetchExperiences()
   .then(
     (data)=>{
-      const { vol, work } = sortExperiences( data.experience )
+      const { volunteer, work } = sortExperiences( data.experience )
       const workTarget = document.querySelector( ".experience-cards" )
       const volTarget = document.querySelector( ".volunteership" );
 
-      volTarget.innerHTML = VolunteerList(vol)
+      volTarget.innerHTML = VolunteerList(volunteer)
       workTarget.innerHTML = WorkList(work)
 
     }

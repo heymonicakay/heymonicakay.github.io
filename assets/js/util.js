@@ -1,4 +1,14 @@
-const mybutton = document.getElementById("myBtn");
+const topFunction = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+const toTheTop = document.getElementById( "myBtn" );
+
+toTheTop.addEventListener(
+  "click",
+  topFunction
+)
 
 export const pickOne = (arr) => {
   const numberOutOfAHat = Math.floor(Math.random() * arr.length);
@@ -22,9 +32,13 @@ export const err = (error) => {
 }
 
 export const scrollFunction = () => {
-    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
+  const {body, documentElement} = document
+
+    if (body.scrollTop > 350 || documentElement.scrollTop > 350) {
+      toTheTop.style.display = "block";
+    }
+  //
+    else {
+      toTheTop.style.display = "none";
     }
   }

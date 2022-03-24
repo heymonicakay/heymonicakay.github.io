@@ -13,16 +13,15 @@ $(document)
     }
 );
 
-window.onscroll = scrollFunction();
+window.addEventListener(
+  "scroll",
+  scrollFunction
+)
 
 let bodyElement = $(`body`);
 
 bodyElement.prepend(nav);
 
-const topFunction = () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
 
 renderExperiences()
 renderRecommendations()
